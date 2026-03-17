@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #2563EB;
+  --accent-dark: #3B82F6;
+}
+
+* {
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+/* Price slider track */
+input[type='range'] {
+  @apply appearance-none h-1 rounded-full bg-gray-300 dark:bg-gray-700 outline-none;
+}
+input[type='range']::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 rounded-full bg-accent cursor-pointer;
+}

@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build output
+frontend/dist/
+
+# Uploaded images (keep directory structure)
+backend/uploads/cars/*
+backend/uploads/brands/*
+!backend/uploads/cars/.gitkeep
+!backend/uploads/brands/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+AUTOVAULT_MASTER_PROMPT.md
+schema.sql
+seed.sql

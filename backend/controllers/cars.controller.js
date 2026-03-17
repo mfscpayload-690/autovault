@@ -46,10 +46,6 @@ exports.list = async (req, res) => {
     const [rows] = await db.query(sql, params);
 
     // Count total for pagination
-    let countSql = 'SELECT COUNT(*) AS total FROM car_full_spec_view WHERE 1=1';
-    const countParams = params.slice(0, -2); // remove LIMIT/OFFSET params
-
-    // Rebuild count query conditions
     let countQuery = 'SELECT COUNT(*) AS total FROM car_full_spec_view WHERE 1=1';
     const cParams = [];
     if (brand) { countQuery += ' AND brand_name = ?'; cParams.push(brand); }

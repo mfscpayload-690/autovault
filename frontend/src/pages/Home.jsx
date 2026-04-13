@@ -56,6 +56,11 @@ export default function Home() {
     axios.get('/api/cars/badges').then(res => setBadges(res.data)).catch(() => {});
   }, []);
 
+  const clearRecentHistory = () => {
+    setRecentlyViewed([]);
+    sessionStorage.removeItem('autovault-recent');
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-6">
       {/* Hero */}
@@ -71,7 +76,15 @@ export default function Home() {
       {/* Recently Viewed */}
       {recentlyViewed.length > 0 && (
         <section className="mb-8">
-          <h2 className="text-lg font-semibold mb-3">Recently viewed</h2>
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-lg font-semibold">Recently viewed</h2>
+            <button
+              onClick={clearRecentHistory}
+              className="text-xs text-red-500 hover:text-red-400"
+            >
+              Clear history
+            </button>
+          </div>
           <div className="flex gap-4 overflow-x-auto pb-2">
             {recentlyViewed.map(car => (
               <div key={car.id} className="w-56 shrink-0">

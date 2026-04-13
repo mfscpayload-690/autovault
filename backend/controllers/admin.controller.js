@@ -2,15 +2,24 @@ const db = require('../config/db');
 const path = require('path');
 const multer = require('multer');
 
+function sanitizeFilename(name) {
+  const cleaned = String(name)
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^a-zA-Z0-9._-]/g, '');
+
+  return cleaned || 'image';
+}
+
 // --- Multer config ---
 const carStorage = multer.diskStorage({
   destination: (_req, _file, cb) => cb(null, path.join(__dirname, '../uploads/cars')),
-  filename: (_req, file, cb) => cb(null, `${Date.now()}-${file.originalname}`),
+  filename: (_req, file, cb) => cb(null, `${Date.now()}-${sanitizeFilename(file.originalname)}`),
 });
 
 const brandStorage = multer.diskStorage({
   destination: (_req, _file, cb) => cb(null, path.join(__dirname, '../uploads/brands')),
-  filename: (_req, file, cb) => cb(null, `${Date.now()}-${file.originalname}`),
+  filename: (_req, file, cb) => cb(null, `${Date.now()}-${sanitizeFilename(file.originalname)}`),
 });
 
 const fileFilter = (_req, file, cb) => {

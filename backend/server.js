@@ -38,7 +38,8 @@ const loginLimiter = rateLimit({
   max: 10,
   message: { error: 'Too many attempts. Please try again after a minute.' },
 });
-app.use('/api/auth', loginLimiter);
+app.use('/api/auth/login', loginLimiter);
+app.use('/api/auth/register', loginLimiter);
 
 // --- Routes ---
 app.use('/api/auth', authRoutes);

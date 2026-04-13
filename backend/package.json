@@ -5,7 +5,10 @@
   "main": "cluster.js",
   "scripts": {
     "start": "node cluster.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "images:auto-map": "node scripts/autoMapImages.js",
+    "images:export-template": "node scripts/exportMissingImageTemplate.js",
+    "images:apply-map": "node scripts/applyImageMap.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

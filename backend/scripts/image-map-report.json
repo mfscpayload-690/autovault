@@ -1,0 +1,364 @@
+{
+  "timestamp": "2026-04-13T15:29:10.573Z",
+  "files": {
+    "brandFiles": 0,
+    "carFiles": 12
+  },
+  "brands": {
+    "total": 20,
+    "updated": 0,
+    "unresolved": [
+      {
+        "id": 1,
+        "name": "Maruti Suzuki",
+        "current": "/uploads/brands/maruti-suzuki.png"
+      },
+      {
+        "id": 2,
+        "name": "Hyundai",
+        "current": "/uploads/brands/hyundai.png"
+      },
+      {
+        "id": 3,
+        "name": "Tata Motors",
+        "current": "/uploads/brands/tata.png"
+      },
+      {
+        "id": 4,
+        "name": "Mahindra",
+        "current": "/uploads/brands/mahindra.png"
+      },
+      {
+        "id": 5,
+        "name": "Kia",
+        "current": "/uploads/brands/kia.png"
+      },
+      {
+        "id": 6,
+        "name": "Toyota",
+        "current": "/uploads/brands/toyota.png"
+      },
+      {
+        "id": 7,
+        "name": "Honda",
+        "current": "/uploads/brands/honda.png"
+      },
+      {
+        "id": 8,
+        "name": "Renault",
+        "current": "/uploads/brands/renault.png"
+      },
+      {
+        "id": 9,
+        "name": "Nissan",
+        "current": "/uploads/brands/nissan.png"
+      },
+      {
+        "id": 10,
+        "name": "Jeep",
+        "current": "/uploads/brands/jeep.png"
+      },
+      {
+        "id": 11,
+        "name": "Skoda",
+        "current": "/uploads/brands/skoda.png"
+      },
+      {
+        "id": 12,
+        "name": "Volkswagen",
+        "current": "/uploads/brands/volkswagen.png"
+      },
+      {
+        "id": 13,
+        "name": "BMW",
+        "current": "/uploads/brands/bmw.png"
+      },
+      {
+        "id": 14,
+        "name": "Mercedes-Benz",
+        "current": "/uploads/brands/mercedes.png"
+      },
+      {
+        "id": 15,
+        "name": "MG Motor",
+        "current": "/uploads/brands/mg.png"
+      },
+      {
+        "id": 16,
+        "name": "Citroen",
+        "current": "/uploads/brands/citroen.png"
+      },
+      {
+        "id": 17,
+        "name": "BYD",
+        "current": "/uploads/brands/byd.png"
+      },
+      {
+        "id": 18,
+        "name": "Force Motors",
+        "current": "/uploads/brands/force.png"
+      },
+      {
+        "id": 19,
+        "name": "Isuzu",
+        "current": "/uploads/brands/isuzu.png"
+      },
+      {
+        "id": 20,
+        "name": "Volvo",
+        "current": "/uploads/brands/volvo.png"
+      }
+    ]
+  },
+  "cars": {
+    "total": 45,
+    "updated": 2,
+    "unresolved": [
+      {
+        "id": 1,
+        "name": "Swift",
+        "variant": "ZXi+",
+        "brand": "Maruti Suzuki",
+        "current": null
+      },
+      {
+        "id": 2,
+        "name": "Baleno",
+        "variant": "Alpha",
+        "brand": "Maruti Suzuki",
+        "current": null
+      },
+      {
+        "id": 4,
+        "name": "Brezza",
+        "variant": "ZXI Plus AT",
+        "brand": "Maruti Suzuki",
+        "current": null
+      },
+      {
+        "id": 5,
+        "name": "Ertiga",
+        "variant": "ZXI Plus AT",
+        "brand": "Maruti Suzuki",
+        "current": null
+      },
+      {
+        "id": 6,
+        "name": "Grand Vitara",
+        "variant": "Alpha Plus AT e-AWD",
+        "brand": "Maruti Suzuki",
+        "current": null
+      },
+      {
+        "id": 7,
+        "name": "Creta",
+        "variant": "SX(O) Turbo DCT",
+        "brand": "Hyundai",
+        "current": null
+      },
+      {
+        "id": 8,
+        "name": "Verna",
+        "variant": "SX(O) Turbo IVT",
+        "brand": "Hyundai",
+        "current": null
+      },
+      {
+        "id": 9,
+        "name": "Grand i10 Nios",
+        "variant": "Asta (O) Turbo MT",
+        "brand": "Hyundai",
+        "current": null
+      },
+      {
+        "id": 10,
+        "name": "Ioniq 5",
+        "variant": "AWD",
+        "brand": "Hyundai",
+        "current": null
+      },
+      {
+        "id": 11,
+        "name": "Nexon",
+        "variant": "Creative Plus S AMT",
+        "brand": "Tata Motors",
+        "current": null
+      },
+      {
+        "id": 12,
+        "name": "Nexon EV",
+        "variant": "Empowered Plus S LR",
+        "brand": "Tata Motors",
+        "current": null
+      },
+      {
+        "id": 13,
+        "name": "Tiago",
+        "variant": "XZA+ AMT",
+        "brand": "Tata Motors",
+        "current": null
+      },
+      {
+        "id": 14,
+        "name": "Tiago EV",
+        "variant": "XZ+ LR Tech",
+        "brand": "Tata Motors",
+        "current": null
+      },
+      {
+        "id": 15,
+        "name": "Harrier",
+        "variant": "Adventure Plus AT",
+        "brand": "Tata Motors",
+        "current": null
+      },
+      {
+        "id": 16,
+        "name": "Safari",
+        "variant": "Adventure Plus AT 7S",
+        "brand": "Tata Motors",
+        "current": null
+      },
+      {
+        "id": 18,
+        "name": "Thar",
+        "variant": "LX 4WD Diesel AT Hard Top",
+        "brand": "Mahindra",
+        "current": null
+      },
+      {
+        "id": 19,
+        "name": "XUV700",
+        "variant": "AX7 L Diesel AT AWD 7S",
+        "brand": "Mahindra",
+        "current": null
+      },
+      {
+        "id": 20,
+        "name": "XUV400 EV",
+        "variant": "EC Pro L",
+        "brand": "Mahindra",
+        "current": null
+      },
+      {
+        "id": 21,
+        "name": "Seltos",
+        "variant": "X-Line GT DCT",
+        "brand": "Kia",
+        "current": null
+      },
+      {
+        "id": 22,
+        "name": "Carens",
+        "variant": "Luxury Plus 1.5 Diesel AT",
+        "brand": "Kia",
+        "current": null
+      },
+      {
+        "id": 23,
+        "name": "EV6",
+        "variant": "GT Line AWD",
+        "brand": "Kia",
+        "current": null
+      },
+      {
+        "id": 24,
+        "name": "Innova Crysta",
+        "variant": "GX+ MT 7S",
+        "brand": "Toyota",
+        "current": null
+      },
+      {
+        "id": 25,
+        "name": "Fortuner",
+        "variant": "Legender 4x4 AT",
+        "brand": "Toyota",
+        "current": null
+      },
+      {
+        "id": 26,
+        "name": "City Hybrid",
+        "variant": "ZX CVT",
+        "brand": "Honda",
+        "current": null
+      },
+      {
+        "id": 27,
+        "name": "Kiger",
+        "variant": "RXZ Turbo CVT",
+        "brand": "Renault",
+        "current": null
+      },
+      {
+        "id": 28,
+        "name": "Magnite",
+        "variant": "Tekna+ Turbo CVT",
+        "brand": "Nissan",
+        "current": null
+      },
+      {
+        "id": 29,
+        "name": "Meridian",
+        "variant": "Limited O AT AWD",
+        "brand": "Jeep",
+        "current": null
+      },
+      {
+        "id": 30,
+        "name": "Slavia",
+        "variant": "Style 1.5 TSI DSG",
+        "brand": "Skoda",
+        "current": null
+      },
+      {
+        "id": 31,
+        "name": "Kushaq",
+        "variant": "Style 1.5 TSI DSG",
+        "brand": "Skoda",
+        "current": null
+      },
+      {
+        "id": 32,
+        "name": "Virtus",
+        "variant": "GT Plus 1.5 TSI DSG",
+        "brand": "Volkswagen",
+        "current": null
+      },
+      {
+        "id": 33,
+        "name": "3 Series",
+        "variant": "330i M Sport Shadow Edition",
+        "brand": "BMW",
+        "current": null
+      },
+      {
+        "id": 34,
+        "name": "X1",
+        "variant": "sDrive20i xLine",
+        "brand": "BMW",
+        "current": null
+      },
+      {
+        "id": 35,
+        "name": "Benz C-Class",
+        "variant": "C 300d AMG Line",
+        "brand": "Mercedes-Benz",
+        "current": null
+      },
+      {
+        "id": 36,
+        "name": "GLA",
+        "variant": "GLA 200 d AMG Line",
+        "brand": "Mercedes-Benz",
+        "current": null
+      },
+      {
+        "id": 37,
+        "name": "Hector",
+        "variant": "Select Pro Turbo CVT",
+        "brand": "MG Motor",
+        "current": null
+      }
+    ]
+  }
+}

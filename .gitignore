@@ -32,3 +32,4 @@ Thumbs.db
 AUTOVAULT_MASTER_PROMPT.md
 schema.sql
 seed.sql
+backend/scripts/brand-logo-fetch-report.json

@@ -8,7 +8,8 @@
     "dev": "nodemon server.js",
     "images:auto-map": "node scripts/autoMapImages.js",
     "images:export-template": "node scripts/exportMissingImageTemplate.js",
-    "images:apply-map": "node scripts/applyImageMap.js"
+    "images:apply-map": "node scripts/applyImageMap.js",
+    "brands:fetch-logos": "node scripts/fetchBrandLogos.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

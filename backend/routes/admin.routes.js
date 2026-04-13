@@ -69,6 +69,8 @@ router.post(
   adminController.createFeature
 );
 
+router.get('/features', adminController.listFeatures);
+
 router.delete('/features/:id', adminController.deleteFeature);
 
 router.patch('/cars/:id/features', adminController.updateCarFeatures);

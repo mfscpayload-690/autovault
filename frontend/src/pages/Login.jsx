@@ -15,8 +15,8 @@ export default function Login() {
     setError('');
     setLoading(true);
     try {
-      await login(email, password);
-      navigate('/');
+      const loggedInUser = await login(email, password);
+      navigate(loggedInUser?.role === 'admin' ? '/admin' : '/');
     } catch (err) {
       setError(err.response?.data?.error || 'Login failed');
     } finally {
@@ -27,6 +27,10 @@ export default function Login() {
   return (
     <div className="max-w-md mx-auto px-4 py-16">
       <h1 className="text-2xl font-bold text-center mb-6">Login to AutoVault</h1>
+
+      <div className="mb-4 text-xs text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-900/60 border border-border-light dark:border-border-dark rounded-md px-3 py-2">
+        Admin accounts are redirected to the admin panel automatically after login.
+      </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         {error && (

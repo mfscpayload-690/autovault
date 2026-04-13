@@ -13,6 +13,6 @@ const mysql = require('mysql2/promise');
 
     await conn.end();
   } catch (err) {
-    parentPort.postMessage({ error: err.message });
+    parentPort.postMessage({ __error: true, message: err.message });
   }
 })();

@@ -22,17 +22,57 @@ export default function CarForm({ car, onSave, onCancel }) {
     axios.get('/api/brands').then(res => setBrands(res.data)).catch(() => {});
   }, []);
 
+  // Reset form when adding a new car
+  useEffect(() => {
+    if (!car) {
+      setForm({
+        brand_id: '', body_type_id: '', fuel_type_id: '', name: '', variant: '',
+        launch_year: '', price_min_lakh: '', price_max_lakh: '', image_url: '', description: '',
+        displacement_cc: '', cylinders: '', max_power_bhp: '', max_torque_nm: '',
+        compression_ratio: '', engine_type: '', battery_kwh: '', charge_time_ac_hrs: '', charge_time_dc_mins: '',
+        top_speed_kmh: '', acceleration_0_100_sec: '', fuel_efficiency_kmpl: '', range_km: '',
+        transmission_type: '', num_gears: '', drive_type: '',
+        length_mm: '', width_mm: '', height_mm: '', wheelbase_mm: '', kerb_weight_kg: '',
+        boot_space_litres: '', seating_capacity: '', ground_clearance_mm: '', fuel_tank_litres: '',
+      });
+      setImageFile(null);
+    }
+  }, [car]);
+
   useEffect(() => {
     if (car) {
       const mapped = {};
       for (const key of Object.keys(form)) {
         mapped[key] = car[key] ?? car[key.replace(/_([a-z])/g, (_, c) => c.toUpperCase())] ?? '';
       }
+      
       // Map view column names to form fields
+      if (car.car_name) mapped.name = car.car_name;
+      
+      // Map brand_name to brand_id
       if (car.brand_name) {
         const brand = brands.find(b => b.name === car.brand_name);
         if (brand) mapped.brand_id = brand.id;
       }
+      
+      // Map body_type string to body_type_id number
+      if (car.body_type) {
+        const bodyTypeMap = {
+          'Hatchback': 1, 'Sedan': 2, 'SUV': 3, 'Compact SUV': 4, 'MPV': 5,
+          'Coupe': 6, 'Convertible': 7, 'Pickup Truck': 8, 'EV Hatchback': 9,
+          'EV SUV': 10, 'EV Sedan': 11,
+        };
+        mapped.body_type_id = bodyTypeMap[car.body_type] || '';
+      }
+      
+      // Map fuel_type string to fuel_type_id number
+      if (car.fuel_type) {
+        const fuelTypeMap = {
+          'Petrol': 1, 'Diesel': 2, 'CNG': 3, 'Hybrid': 4, 'Electric': 5,
+        };
+        mapped.fuel_type_id = fuelTypeMap[car.fuel_type] || '';
+      }
+      
       setForm(prev => ({ ...prev, ...mapped }));
     }
   }, [car, brands]);

@@ -100,7 +100,15 @@ export default function CarDetail() {
         <div className="md:w-1/2">
           <div className="flex items-center gap-2 mb-1">
             {car.brand_logo && (
-              <img src={car.brand_logo} alt="" className="w-8 h-8 rounded-full bg-white dark:bg-gray-800 object-contain p-0.5 border border-border-light dark:border-border-dark" />
+              <img
+                src={car.brand_logo}
+                alt=""
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = '/favicon.svg';
+                }}
+                className="w-8 h-8 rounded-full bg-white dark:bg-gray-800 object-contain p-0.5 border border-border-light dark:border-border-dark"
+              />
             )}
             <span className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wide">{car.brand_name}</span>
           </div>

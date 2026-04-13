@@ -12,6 +12,7 @@ import ManageCars from './pages/admin/ManageCars';
 import ManageBrands from './pages/admin/ManageBrands';
 import ManageUsers from './pages/admin/ManageUsers';
 import AuditLogs from './pages/admin/AuditLogs';
+import ManageFeatures from './pages/admin/ManageFeatures';
 import CompareBar from './components/ui/CompareBar';
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
             <Route index element={<Dashboard />} />
             <Route path="cars" element={<ManageCars />} />
             <Route path="brands" element={<ManageBrands />} />
+            <Route path="features" element={<ManageFeatures />} />
             <Route path="users" element={<ManageUsers />} />
             <Route path="audit-logs" element={<AuditLogs />} />
           </Route>

@@ -49,6 +49,10 @@ export default function Home() {
   }, [filters, pagination.page]);
 
   useEffect(() => {
+    setPagination(prev => (prev.page === 1 ? prev : { ...prev, page: 1 }));
+  }, [filters]);
+
+  useEffect(() => {
     axios.get('/api/cars/badges').then(res => setBadges(res.data)).catch(() => {});
   }, []);
 

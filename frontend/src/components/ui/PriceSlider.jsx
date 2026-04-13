@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const brackets = [
   { min: 5, max: 10, label: 'Budget' },
@@ -15,6 +15,14 @@ function formatPrice(val) {
 export default function PriceSlider({ min, max, onChange }) {
   const [localMin, setLocalMin] = useState(min || 0);
   const [localMax, setLocalMax] = useState(max || 100);
+
+  useEffect(() => {
+    setLocalMin(min || 0);
+  }, [min]);
+
+  useEffect(() => {
+    setLocalMax(max || 100);
+  }, [max]);
 
   const handleMinChange = (e) => {
     const val = Math.min(Number(e.target.value), localMax - 1);

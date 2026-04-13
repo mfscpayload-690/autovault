@@ -9,18 +9,20 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const [carsRes, brandsRes, usersRes] = await Promise.all([
+        const [carsRes, brandsRes, usersRes, featuresRes] = await Promise.all([
           axios.get('/api/cars?limit=1'),
           axios.get('/api/brands'),
           axios.get('/api/admin/users', { withCredentials: true }),
+          axios.get('/api/admin/features', { withCredentials: true }),
         ]);
         setStats({
           totalCars: carsRes.data.pagination?.total || 0,
           totalBrands: brandsRes.data.length,
           totalUsers: usersRes.data.length,
+          totalFeatures: featuresRes.data.length,
         });
       } catch {
-        setStats({ totalCars: 0, totalBrands: 0, totalUsers: 0 });
+        setStats({ totalCars: 0, totalBrands: 0, totalUsers: 0, totalFeatures: 0 });
       } finally {
         setLoading(false);
       }
@@ -33,13 +35,14 @@ export default function Dashboard() {
   const cards = [
     { label: 'Total Cars', value: stats.totalCars, color: 'text-accent' },
     { label: 'Brands', value: stats.totalBrands, color: 'text-green-600 dark:text-green-400' },
+    { label: 'Features', value: stats.totalFeatures, color: 'text-amber-600 dark:text-amber-400' },
     { label: 'Users', value: stats.totalUsers, color: 'text-purple-600 dark:text-purple-400' },
   ];
 
   return (
     <div>
       <h1 className="text-xl font-bold mb-6">Dashboard</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {cards.map(card => (
           <div key={card.label} className="border border-border-light dark:border-border-dark rounded-lg p-5">
             <p className="text-sm text-gray-500 dark:text-gray-400">{card.label}</p>

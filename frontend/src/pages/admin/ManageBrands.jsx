@@ -54,7 +54,15 @@ export default function ManageBrands() {
           {brands.map(brand => (
             <div key={brand.id} className="flex items-center gap-3 border border-border-light dark:border-border-dark rounded-lg p-3">
               {brand.logo_url && (
-                <img src={brand.logo_url} alt="" className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 object-contain p-1 border border-border-light dark:border-border-dark" />
+                <img
+                  src={brand.logo_url}
+                  alt=""
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = '/favicon.svg';
+                  }}
+                  className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 object-contain p-1 border border-border-light dark:border-border-dark"
+                />
               )}
               <div className="flex-1 min-w-0">
                 <p className="font-medium text-sm truncate">{brand.name}</p>

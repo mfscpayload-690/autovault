@@ -275,6 +275,18 @@ exports.createFeature = async (req, res) => {
   }
 };
 
+exports.listFeatures = async (_req, res) => {
+  try {
+    const [rows] = await db.query(
+      'SELECT id, feature_name, category FROM features ORDER BY category, feature_name'
+    );
+    res.json(rows);
+  } catch (err) {
+    console.error('List features error:', err);
+    res.status(500).json({ error: 'Failed to fetch features' });
+  }
+};
+
 exports.deleteFeature = async (req, res) => {
   try {
     const featureId = req.params.id;

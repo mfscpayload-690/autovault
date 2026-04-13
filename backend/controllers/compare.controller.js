@@ -41,6 +41,10 @@ exports.compare = async (req, res) => {
       });
     });
 
+    if (result && result.__error) {
+      throw new Error(result.message || 'Worker comparison failed');
+    }
+
     res.json(result);
   } catch (err) {
     console.error('Compare error:', err);
